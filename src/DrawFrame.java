@@ -58,7 +58,7 @@ public class DrawFrame extends JFrame {
 		this.setLocationRelativeTo(null);
 		this.setVisible(true);
 		
-		PanelToImage.makePanelPNGImage(drawPanel, "lab10image");
+		//PanelToImage.makePanelPNGImage(drawPanel, "lab10image");
 	}
 	
 	public static void main(String[] args) throws IOException 

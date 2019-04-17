@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../../jacoco-resources/report.gif" type="image/gif"/><title>DrawFrame.java</title><link rel="stylesheet" href="../../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../../index.html" class="el_report">(default package) (Apr 16, 2019 10:50:09 PM)</a> &gt; <a href="../../index.html" class="el_group">lab10</a> &gt; <a href="../index.html" class="el_bundle">src</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">DrawFrame.java</span></div><h1>DrawFrame.java</h1><pre class="source lang-java linenums">import java.awt.Color;
+import java.awt.Point;
+import java.io.IOException;
+
+import javax.swing.JFrame;
+
+public class DrawFrame extends JFrame {
+
+	private DrawPanel drawPanel;
+	
+	public DrawFrame(String title) throws IOException 
+	{
+<span class="nc" id="L13">		super();</span>
+<span class="nc" id="L14">		setTitle(title);</span>
+<span class="nc" id="L15">		drawPanel = new DrawPanel();</span>
+<span class="nc" id="L16">		drawPanel.setBackground(Color.CYAN);</span>
+		
+<span class="nc" id="L18">		Point pointUL = new Point(300,300);</span>
+<span class="nc" id="L19">		Point pointUR = new Point(500, 500);</span>
+		
+<span class="nc" id="L21">		Point sqr = new Point(380, 275);</span>
+<span class="nc" id="L22">		Square square = new Square(sqr, 100, Color.WHITE, true);</span>
+		
+<span class="nc" id="L24">		Point ova = new Point(260,250);</span>
+<span class="nc" id="L25">		Oval oval = new Oval(ova, 100, 200, Color.BLUE, true);</span>
+		
+<span class="nc" id="L27">		Point circ = new Point(300,150);</span>
+<span class="nc" id="L28">		Circle circle = new Circle(circ, 100, Color.ORANGE, true);</span>
+		
+<span class="nc" id="L30">		Point poly = new Point(125, 125);</span>
+<span class="nc" id="L31">		PolyLine polyLine = new PolyLine(poly, pointUL, 15, Color.BLACK, true);</span>
+		
+<span class="nc" id="L33">		Point rTri = new Point(80, 300);</span>
+<span class="nc" id="L34">		RightTriangle rightTriangle = new RightTriangle(rTri, 100, -200, Color.MAGENTA, true);</span>
+		
+<span class="nc" id="L36">		Point rect = new Point(300, 200);</span>
+<span class="nc" id="L37">		Rectangle rectangle = new Rectangle(rect, 200, 100, Color.DARK_GRAY, true);</span>
+		
+<span class="nc" id="L39">		Point iso = new Point(150, 300);</span>
+<span class="nc" id="L40">		IsoscelesTriangle isoTriangle = new IsoscelesTriangle(iso, 200, -200, Color.RED, true);</span>
+		
+<span class="nc" id="L42">		Point diam = new Point(18, 300);</span>
+<span class="nc" id="L43">		Diamond diamond = new Diamond(diam, 200, Color.YELLOW, true);</span>
+		
+<span class="nc" id="L45">		drawPanel.addShape(rectangle);</span>
+<span class="nc" id="L46">		drawPanel.addShape(square);</span>
+<span class="nc" id="L47">		drawPanel.addShape(isoTriangle);</span>
+<span class="nc" id="L48">		drawPanel.addShape(diamond);</span>
+<span class="nc" id="L49">		drawPanel.addShape(polyLine);</span>
+<span class="nc" id="L50">		drawPanel.addShape(rightTriangle);</span>
+<span class="nc" id="L51">		drawPanel.addShape(circle);</span>
+<span class="nc" id="L52">		drawPanel.addShape(oval);</span>
+		
+<span class="nc" id="L54">		add(drawPanel);</span>
+		
+<span class="nc" id="L56">		this.setSize(600, 600);</span>
+<span class="nc" id="L57">		this.setDefaultCloseOperation(EXIT_ON_CLOSE);</span>
+<span class="nc" id="L58">		this.setLocationRelativeTo(null);</span>
+<span class="nc" id="L59">		this.setVisible(true);</span>
+		
+		//PanelToImage.makePanelPNGImage(drawPanel, &quot;lab10image&quot;);
+<span class="nc" id="L62">	}</span>
+	
+	public static void main(String[] args) throws IOException 
+	{	
+<span class="nc" id="L66">		DrawFrame frame = new DrawFrame(&quot;My Picture&quot;);</span>
+		
+<span class="nc" id="L68">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.1.201803210924</span>(default package) (Apr 16, 2019 10:50:09 PM)</div></body></html>
