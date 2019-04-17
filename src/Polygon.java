@@ -2,6 +2,12 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 
+/**
+ * Class to represent an abstract polygon object, used as a parent class for PolyLine, Triangle, RightTriangle, IsoscelesTriangle,
+ * Rectangle, and Square
+ * @author ryfleming
+ *
+ */
 abstract class Polygon extends Shape{
 
 	public Polygon(Color color, boolean filled) 

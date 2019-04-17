@@ -2,7 +2,11 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.util.ArrayList;
 import javax.swing.JPanel;
-
+/**
+ * Class to construct DrawPanel used to draw shapes.
+ * @author ryfleming
+ *
+ */
 public class DrawPanel extends JPanel{
 
 	ArrayList<Shape> shapeList;

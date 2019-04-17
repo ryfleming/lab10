@@ -1,6 +1,10 @@
 import java.awt.Color;
 import java.awt.Point;
-
+/**
+ * Class to represent a RightTriangle object
+ * @author ryfleming
+ *
+ */
 public class RightTriangle extends Triangle {
 	
 	public RightTriangle(Point pointRA, int base, int height, Color color, boolean filled) {

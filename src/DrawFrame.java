@@ -3,7 +3,11 @@ import java.awt.Point;
 import java.io.IOException;
 
 import javax.swing.JFrame;
-
+/**
+ * Class to construct DrawFrame object with embedded image containing shapes
+ * @author ryfleming
+ *
+ */
 public class DrawFrame extends JFrame {
 
 	private DrawPanel drawPanel;

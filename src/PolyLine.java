@@ -1,6 +1,11 @@
 import java.awt.Color;
 import java.awt.Point;
 
+/**
+ * Class to represent a PolyLine object
+ * @author ryfleming
+ *
+ */
 public class PolyLine extends Polygon {
 
 	public PolyLine(Point pointUL, Point pointUR, int thickness, Color color, boolean filled) 

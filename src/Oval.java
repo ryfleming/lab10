@@ -4,6 +4,11 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Point;
 
+/**
+ * Class to represent an Oval object
+ * @author ryfleming
+ *
+ */
 public class Oval extends Shape {
 	
 	private int diameter1;

@@ -1,6 +1,11 @@
 import java.awt.Color;
 import java.awt.Point;
 
+/**
+ * Class to represent a Rectangle object
+ * @author ryfleming
+ *
+ */
 public class Rectangle extends Polygon{
 	
 	public Rectangle(Point pointUL, int width, int height, Color color, boolean filled) {

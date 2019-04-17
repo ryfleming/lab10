@@ -1,6 +1,11 @@
 import java.awt.Color;
 import java.awt.Point;
 
+/**
+ * Class to represent an IsoscelesTriangle object
+ * @author ryfleming
+ *
+ */
 public class IsoscelesTriangle extends Triangle{
 
 	public IsoscelesTriangle(Point pointLB, int base, int height, Color color, boolean filled) 
