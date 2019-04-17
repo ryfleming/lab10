@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"<Unnamed>","c":"Sinusoid","l":"draw(Graphics)","url":"draw-java.awt.Graphics-"},{"p":"<Unnamed>","c":"Sinusoid","l":"samplerate"},{"p":"<Unnamed>","c":"Sinusoid","l":"Sinusoid(Color, Point, int, int, int)","url":"Sinusoid-java.awt.Color-java.awt.Point-int-int-int-"}]
