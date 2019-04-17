@@ -9,8 +9,8 @@ public class Rectangle extends Polygon{
 		
 		location[0] = pointUL;
 		location[1] = new Point(pointUL.x + width, pointUL.y);
-		location[2] = new Point(pointUL.x, pointUL.y + height); 
-		location[3] = new Point(pointUL.x + width, pointUL.y + height);
+		location[2] = new Point(pointUL.x + width, pointUL.y + height); 
+		location[3] = new Point(pointUL.x, pointUL.y + height);
 	}
 
 }

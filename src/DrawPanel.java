@@ -1,4 +1,5 @@
 import java.awt.Graphics;
+import java.awt.Graphics2D;
 import java.util.ArrayList;
 import javax.swing.JPanel;
 
@@ -6,11 +7,22 @@ public class DrawPanel extends JPanel{
 
 	ArrayList<Shape> shapeList;
 	
+	public DrawPanel() {
+		super();
+		shapeList = new ArrayList<Shape>();
+	}
+	
 	public void addShape(Shape shape) {
 		shapeList.add(shape);
 	}
 	
-	protected void paintCompenent(Graphics graphics) {
+	
+	protected void paintComponent(Graphics graphics) {
+		super.paintComponent(graphics);
+		Graphics2D g2d = (Graphics2D)graphics;
+		for(Shape shape: shapeList) {
+			shape.draw(g2d);
+		}
 		
 	}
 }

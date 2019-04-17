@@ -1,5 +1,7 @@
+import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.Graphics2D;
 import java.awt.Point;
 
 public class Oval extends Shape {
@@ -29,13 +31,12 @@ public class Oval extends Shape {
 	@Override
 	public void draw(Graphics graphics) 
 	{
-		graphics.setColor(getColor());
-		graphics.drawOval(location[0].x, location[0].y, this.getDiameter1(), this.getDiameter2());
+		Graphics2D g2d = (Graphics2D)graphics;
+		g2d.setColor(this.getColor());
+		g2d.drawOval(location[0].x, location[0].y, this.getDiameter1(), this.getDiameter2());
 		if(this.isFilled()) {
-			graphics.fillOval(location[0].x, location[0].y, this.getDiameter1(), this.getDiameter2());
+			g2d.fillOval(location[0].x, location[0].y, this.getDiameter1(), this.getDiameter2());
 		}
 	}
-	
-	
 
 }

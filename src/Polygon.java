@@ -1,7 +1,8 @@
 import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.Graphics2D;
 
-public class Polygon extends Shape{
+abstract class Polygon extends Shape{
 
 	public Polygon(Color color, boolean filled) 
 	{
@@ -10,7 +11,9 @@ public class Polygon extends Shape{
 	
 	@Override
 	public void draw(Graphics graphics) {
-		graphics.setColor(getColor());
+		Graphics2D g2d = (Graphics2D)graphics;
+		g2d.setColor(this.getColor());
+		
 		int[] xCoord = new int[getLocation().length];
 		int[] yCoord = new int[getLocation().length];
 		int nPoints = getLocation().length;
@@ -20,9 +23,9 @@ public class Polygon extends Shape{
 			yCoord[index] = (int)getLocation()[index].getY();
 		}
 		
-		graphics.drawPolygon(xCoord, yCoord, nPoints);
+		g2d.drawPolygon(xCoord, yCoord, nPoints);
 		if(isFilled()) {
-			graphics.fillPolygon(xCoord, yCoord, nPoints);
+			g2d.fillPolygon(xCoord, yCoord, nPoints);
 		}
 		
 	}
