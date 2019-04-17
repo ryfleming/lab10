@@ -1,13 +1,14 @@
 import java.awt.Color;
 import java.awt.Point;
+import java.io.IOException;
 
 import javax.swing.JFrame;
 
 public class DrawFrame extends JFrame {
 
-	DrawPanel drawPanel;
+	private DrawPanel drawPanel;
 	
-	public DrawFrame(String title) 
+	public DrawFrame(String title) throws IOException 
 	{
 		super();
 		setTitle(title);
@@ -56,10 +57,13 @@ public class DrawFrame extends JFrame {
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		this.setLocationRelativeTo(null);
 		this.setVisible(true);
+		
+		PanelToImage.makePanelPNGImage(drawPanel, "lab10image");
 	}
 	
-	public static void main(String[] args) {
-		
+	public static void main(String[] args) throws IOException 
+	{	
 		DrawFrame frame = new DrawFrame("My Picture");
+		
 	}
 }
